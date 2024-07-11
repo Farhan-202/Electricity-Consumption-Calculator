@@ -35,7 +35,7 @@
 
             $power = $voltage * $current; 
 			
-			echo "<table class='table table-bordered mt-4'>";
+	    echo "<table class='table table-bordered mt-4'>";
             echo "<thead><tr><th>#</th><th>Hour</th><th>Energy (kWh)</th><th>Total (RM)</th></tr></thead>";
             echo "<tbody>";
 			
@@ -51,14 +51,14 @@
                 echo "</tr>";
             }
 			
-			$energy_per_hour = $power * 1 / 1000;
-			$total_charge_per_hour = $energy_per_hour * ($rate / 100);
+	    $energy_per_hour = $power * 1 / 1000;
+	    $total_charge_per_hour = $energy_per_hour * ($rate / 100);
             $energy_per_day = $energy_per_hour * 24; 
             $total_charge_per_day = $total_charge_per_hour * 24;
 
             echo "<div class='mt-4'>";
             echo "<h4>Results</h4>";
-			echo "<p>Rate: " . number_format($rate, 2) . " sen/kWh</p>";
+	    echo "<p>Rate: " . number_format($rate, 2) . " sen/kWh</p>";
             echo "<p>Power: " . number_format($power, 2) . " Watts</p>";
             echo "<p>Energy per Hour: " . number_format($energy_per_hour, 5) . " kWh</p>";
             echo "<p>Energy per Day: " . number_format($energy_per_day, 5) . " kWh</p>";
