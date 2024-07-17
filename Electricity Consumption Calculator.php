@@ -32,8 +32,8 @@
             $power = $voltage * $current; // Power in Watts
 
             for ($hour = 1; $hour <= 24; $hour++) {
-                $energy_per_hour = $power * $hour / 1000; // Energy in kWh
-                $total_charge_per_hour = $energy_per_hour * ($rate / 100); // Total charge in RM
+                $energy_per_hour = $power * $hour / 1000;
+                $total_charge_per_hour = $energy_per_hour * ($rate / 100); 
 
                 $results[] = [
                     'hour' => $hour,
@@ -67,8 +67,8 @@
 
             $energy_per_hour = $results[0]['energy_per_hour'];
             $total_charge_per_hour = $results[0]['total_charge_per_hour'];
-            $energy_per_day = $energy_per_hour * 24; // Energy for 24 hours in kWh
-            $total_charge_per_day = $total_charge_per_hour * 24; // Total charge for 24 hours in RM
+            $energy_per_day = $energy_per_hour * 24; 
+            $total_charge_per_day = $total_charge_per_hour * 24; 
 
             echo "</tbody></table>";
 
