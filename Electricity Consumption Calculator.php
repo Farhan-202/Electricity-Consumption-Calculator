@@ -29,7 +29,7 @@
         <?php
         function calculateElectricityRates($voltage, $current, $rate) {
             $results = [];
-            $power = $voltage * $current; // Power in Watts
+            $power = $voltage * $current; 
 
             for ($hour = 1; $hour <= 24; $hour++) {
                 $energy_per_hour = $power * $hour / 1000;
